@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import NetworkingPackage
+import NetworkingFramework
 
 @MainActor class MoviesViewModel: ObservableObject {
 
@@ -22,7 +22,14 @@ import NetworkingPackage
 
     func fetchTrendingMovies() {
         resetProperties()
-        NetworkManager.shared.get.trendingMovies(completion: { [weak self] (result: Result<TrendingMovies, Error>) in
+        let trendingMoviesURL = URL(string: NetworkingAPIConstants.baseURL.rawValue
+            + NetworkingAPIConstants.trendingMovies.rawValue
+            + NetworkingAPIConstants.apiKey.rawValue)
+        guard let trendingMoviesURL else {
+            return
+        }
+
+        NetworkManager.shared.fetchData(from: trendingMoviesURL, completion: { [weak self] (result: Result<TrendingMovies, Error>) in
             guard let self else {
                 MoviesAppLogger.sharedInstance.info("[TrendingMoviesViewModel] Self should be non nil")
                 return
@@ -53,7 +60,14 @@ import NetworkingPackage
 
     func fetchPopularMovies() {
         resetProperties()
-        NetworkManager.shared.get.popularMovies(completion: { [weak self] (result: Result<TrendingMovies, Error>) in
+        let popularMoviesURL = URL(string: NetworkingAPIConstants.baseURL.rawValue
+            + NetworkingAPIConstants.popularMovies.rawValue
+            + NetworkingAPIConstants.apiKey.rawValue)
+        guard let popularMoviesURL else {
+            return
+        }
+
+        NetworkManager.shared.fetchData(from: popularMoviesURL, completion: { [weak self] (result: Result<TrendingMovies, Error>) in
             guard let self else {
                 MoviesAppLogger.sharedInstance.info("[TrendingMoviesViewModel] Self should be non nil")
                 return
@@ -115,4 +129,14 @@ import NetworkingPackage
 
         return true
     }
+}
+
+/// Enum which provides URL's which gives data from server
+enum NetworkingAPIConstants: String {
+
+    case apiKey = "?api_key=909594533c98883408adef5d56143539"
+    case baseURL = "https://api.themoviedb.org/3"
+    case trendingMovies = "/trending/all/day"
+    case popularMovies = "/movie/popular"
+
 }

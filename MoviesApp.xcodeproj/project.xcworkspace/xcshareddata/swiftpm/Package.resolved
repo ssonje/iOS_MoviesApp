@@ -1,12 +1,12 @@
 {
   "pins" : [
     {
-      "identity" : "ios_networkingframework_binary",
+      "identity" : "ios_networkingframework",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/ssonje/iOS_NetworkingFramework_Binary.git",
+      "location" : "https://github.com/ssonje/iOS_NetworkingFramework.git",
       "state" : {
         "branch" : "main",
-        "revision" : "6f496e7a978bcf7feb3e267bd0fc067f049c6b87"
+        "revision" : "47123163dc9d439e0fc5a237f0255558990af741"
       }
     }
   ],

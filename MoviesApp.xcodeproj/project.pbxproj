@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		9A0541CD2C10815900561B9B /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0541CC2C10815900561B9B /* MovieDetailView.swift */; };
-		9A2A002E2C1215F300353D1D /* NetworkingPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 9A2A002D2C1215F300353D1D /* NetworkingPackage */; };
 		9AA5FD572C0CAF530026250F /* MoviesAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA5FD562C0CAF530026250F /* MoviesAppApp.swift */; };
 		9AA5FD592C0CAF530026250F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA5FD582C0CAF530026250F /* ContentView.swift */; };
 		9AA5FD5B2C0CAF550026250F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AA5FD5A2C0CAF550026250F /* Assets.xcassets */; };
@@ -27,6 +26,7 @@
 		9AA5FD9A2C0CBD4E0026250F /* MovieCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA5FD992C0CBD4E0026250F /* MovieCardView.swift */; };
 		9AA5FD9C2C0CD4D20026250F /* MoviesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA5FD9B2C0CD4D20026250F /* MoviesListView.swift */; };
 		9AA5FD9E2C0CD8E40026250F /* MoviesTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA5FD9D2C0CD8E40026250F /* MoviesTabView.swift */; };
+		9AC0A7252C1769BC00435BBF /* NetworkingFramework in Frameworks */ = {isa = PBXBuildFile; productRef = 9AC0A7242C1769BC00435BBF /* NetworkingFramework */; };
 		9AC4448B2C10DD8000584696 /* MovieGenre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC4448A2C10DD8000584696 /* MovieGenre.swift */; };
 		9AC4448D2C10DDA600584696 /* MovieCredit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC4448C2C10DDA600584696 /* MovieCredit.swift */; };
 		9AC4448F2C10DDBE00584696 /* MovieCast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC4448E2C10DDBE00584696 /* MovieCast.swift */; };
@@ -90,7 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A2A002E2C1215F300353D1D /* NetworkingPackage in Frameworks */,
+				9AC0A7252C1769BC00435BBF /* NetworkingFramework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,7 +267,7 @@
 			);
 			name = MoviesApp;
 			packageProductDependencies = (
-				9A2A002D2C1215F300353D1D /* NetworkingPackage */,
+				9AC0A7242C1769BC00435BBF /* NetworkingFramework */,
 			);
 			productName = MoviesApp;
 			productReference = 9AA5FD532C0CAF530026250F /* MoviesApp.app */;
@@ -342,7 +342,7 @@
 			);
 			mainGroup = 9AA5FD4A2C0CAF530026250F;
 			packageReferences = (
-				9A2A002C2C1215F200353D1D /* XCRemoteSwiftPackageReference "iOS_NetworkingFramework_Binary" */,
+				9AC0A7232C1769BC00435BBF /* XCRemoteSwiftPackageReference "iOS_NetworkingFramework" */,
 			);
 			productRefGroup = 9AA5FD542C0CAF530026250F /* Products */;
 			projectDirPath = "";
@@ -732,9 +732,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		9A2A002C2C1215F200353D1D /* XCRemoteSwiftPackageReference "iOS_NetworkingFramework_Binary" */ = {
+		9AC0A7232C1769BC00435BBF /* XCRemoteSwiftPackageReference "iOS_NetworkingFramework" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ssonje/iOS_NetworkingFramework_Binary.git";
+			repositoryURL = "https://github.com/ssonje/iOS_NetworkingFramework.git";
 			requirement = {
 				branch = main;
 				kind = branch;
@@ -743,10 +743,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		9A2A002D2C1215F300353D1D /* NetworkingPackage */ = {
+		9AC0A7242C1769BC00435BBF /* NetworkingFramework */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 9A2A002C2C1215F200353D1D /* XCRemoteSwiftPackageReference "iOS_NetworkingFramework_Binary" */;
-			productName = NetworkingPackage;
+			package = 9AC0A7232C1769BC00435BBF /* XCRemoteSwiftPackageReference "iOS_NetworkingFramework" */;
+			productName = NetworkingFramework;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
